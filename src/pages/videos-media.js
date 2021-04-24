@@ -1,11 +1,11 @@
 import React, { useContext } from "react"
 import { graphql } from "gatsby"
-import SEOMatic from "~components/SEOMatic"
-import Layout from "~components/Layout"
-import Image from "~components/Image"
-import tailwindCommon from "~utils/tailwindCommon"
-import { VideoModalContext } from "~utils/context"
-import Play from "~icons/play.svg"
+import SEOMatic from "./../components/SEOMatic"
+import Layout from "./../components/LayoutTest"
+import Image from "./../components/Image"
+import tailwindCommon from "./../utils/tailwindCommon"
+import { VideoModalContext } from "./../utils/context"
+import { BiPlayCircle } from "@react-icons/all-files/bi/BiPlayCircle"
 
 const VideoMediaPage = ({ data }) => {
   const {
@@ -53,7 +53,7 @@ const VideoMediaPage = ({ data }) => {
                     wrapperClass="overflow-hidden h-72"
                     imageClass="h-full w-full object-cover rounded-t-lg"
                   />
-                  <Play
+                  <BiPlayCircle
                     className={`inset-0 m-auto w-20 md:w-auto absolute z-10 play-icon ${tailwindCommon.transition}`}
                   />
                 </div>

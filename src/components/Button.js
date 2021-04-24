@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import tailwindCommon from "~utils/tailwindCommon"
+import tailwindCommon from "./../utils/tailwindCommon"
 
-import Linkify from "~components/Linkify"
+import Linkify from "./Linkify"
 
 const Button = ({ children, link, type }) => {
   let buttonStyle

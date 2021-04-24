@@ -1,7 +1,7 @@
 import React from "react"
-import Image from "~components/Image"
-import LinkLine from "~components/LinkLine"
-import tailwindCommon from "~utils/tailwindCommon"
+import Image from "./Image"
+import LinkLine from "./LinkLine"
+import tailwindCommon from "./../utils/tailwindCommon"
 
 const GroupingHome = ({ title, introText, pagesInThisGroup, image }) => {
   return (

@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import tailwindCommon from "~utils/tailwindCommon"
-import Image from "~components/Image"
-import Arrow from "~icons/arrow.svg"
-import Heart from "~icons/heart.svg"
+import tailwindCommon from "./../utils/tailwindCommon"
+import Image from "./Image"
+import { BiHeartCircle } from "@react-icons/all-files/bi/BiHeartCircle"
+import { BiRightArrowAlt } from "@react-icons/all-files/bi/BiRightArrowAlt"
 
 const CharityCard = ({ charityName, copy, logoColor, websiteUrl, image }) => {
   return (
@@ -31,7 +31,7 @@ const CharityCard = ({ charityName, copy, logoColor, websiteUrl, image }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Heart style={{ color: logoColor }} />
+            <BiHeartCircle style={{ color: logoColor }} />
           </a>
 
           <h3 className="text-xl md:text-xl md:mb-4 font-bold leading-normal mb-3">
@@ -56,7 +56,7 @@ const CharityCard = ({ charityName, copy, logoColor, websiteUrl, image }) => {
             rel="noopener noreferrer"
             className={`flex items-center ${tailwindCommon.transition} ${tailwindCommon.hover}`}
           >
-            <Arrow className="flex-shrink-0 mr-4" />
+            <BiRightArrowAlt className="flex-shrink-0 mr-4" />
             <span>Visit website</span>
           </a>
         </div>

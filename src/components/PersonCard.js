@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import tailwindCommon from "~utils/tailwindCommon"
-import Image from "~components/Image"
+import tailwindCommon from "./../utils/tailwindCommon"
+import Image from "./Image"
 
 const PersonCardContent = ({ image, title, role, copy, fullWidthImage }) => (
   <>

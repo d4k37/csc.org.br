@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import tailwindCommon from "~utils/tailwindCommon"
-import SEOMatic from "~components/SEOMatic"
-import Layout from "~components/Layout"
-import Image from "~components/Image"
+import tailwindCommon from "./../utils/tailwindCommon"
+import SEOMatic from "./../components/SEOMatic"
+import Layout from "./../components/LayoutTest"
+import Image from "./../components/Image"
 
 const OurValuesPage = ({ data }) => {
   const {

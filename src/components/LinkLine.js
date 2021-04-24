@@ -1,10 +1,10 @@
 import React from "react"
 import { withPrefix } from "gatsby"
 import PropTypes from "prop-types"
-import tailwindCommon from "~utils/tailwindCommon"
+import tailwindCommon from "./../utils/tailwindCommon"
 
-import Linkify from "~components/Linkify"
-import Arrow from "~icons/arrow.svg"
+import Linkify from "./Linkify"
+import { BiRightArrowAlt } from "@react-icons/all-files/bi/BiRightArrowAlt"
 
 const LinkLine = ({ children, link, disableAos = false, usePrefix = true }) => (
   <div
@@ -15,7 +15,7 @@ const LinkLine = ({ children, link, disableAos = false, usePrefix = true }) => (
       link={usePrefix ? withPrefix(link) : link}
       className={`flex items-center py-6 pr-6 md:text-lg ${tailwindCommon.transition} ${tailwindCommon.hover}`}
     >
-      <Arrow className="flex-shrink-0 mr-4" />
+      <BiRightArrowAlt className="flex-shrink-0 mr-4" />
       <span className="truncate">{children}</span>
     </Linkify>
   </div>

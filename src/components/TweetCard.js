@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import moment from "moment"
-import tailwindCommon from "~utils/tailwindCommon"
-import Twitter from "~icons/twitter.svg"
+import tailwindCommon from "./../utils/tailwindCommon"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 
 const TweetCard = ({ postDate, tweet, tweetUrl }) => {
   const formattedDate = moment(postDate).format("Do MMMM YYYY")
@@ -14,7 +14,7 @@ const TweetCard = ({ postDate, tweet, tweetUrl }) => {
     >
       <div className="flex flex-col h-full justify-between">
         <div>
-          <Twitter className="mb-8" />
+          <FaTwitter className="mb-8" />
           <p>{tweet}</p>
         </div>
         <a

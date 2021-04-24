@@ -1,10 +1,10 @@
 import React, { Fragment } from "react"
 import { Link } from "gatsby"
-import Logo from "~icons/logo.svg"
-import Button from "~components/Button"
-import NavItemWithDropdown from "~components/NavItemWithDropdown"
-import NavItem from "~components/NavItem"
-import navigationLinks from "~utils/navigation"
+import Logo from "./../icons/logo.svg"
+import Button from "./Button"
+import NavItemWithDropdown from "./NavItemWithDropdown"
+import NavItem from "./NavItem"
+import navigationLinks from "./../utils/navigation"
 
 const SiteHeader = ({ headerData }) => {
   const getDropdownContent = slug => {

@@ -1,17 +1,17 @@
 import React, { Fragment, useContext } from "react"
 import { graphql } from "gatsby"
-import tailwindCommon from "~utils/tailwindCommon"
-import Layout from "~components/Layout"
-import SEOMatic from "~components/SEOMatic"
-import Button from "~components/Button"
-import BlogCard from "~components/BlogCard"
-import CharityCard from "~components/CharityCard"
-import TweetCard from "~components/TweetCard"
-import GroupingHome from "~components/GroupingHome"
-import Image from "~components/Image"
-import LinkLine from "~components/LinkLine"
-import Play from "~icons/play.svg"
-import { VideoModalContext } from "~utils/context"
+import tailwindCommon from "./../utils/tailwindCommon"
+import Layout from "./../components/LayoutTest"
+import SEOMatic from "./../components/SEOMatic"
+import Button from "./../components/Button"
+import BlogCard from "./../components/BlogCard"
+import CharityCard from "./../components/CharityCard"
+import TweetCard from "./../components/TweetCard"
+import GroupingHome from "./../components/GroupingHome"
+import Image from "./../components/Image"
+import LinkLine from "./../components/LinkLine"
+import { BiPlayCircle } from "@react-icons/all-files/bi/BiPlayCircle"
+import { VideoModalContext } from "./../utils/context"
 
 const HomePage = ({ data }) => {
   const {
@@ -40,7 +40,7 @@ const HomePage = ({ data }) => {
         }}
       >
         <Image {...entry.image[0]} useRatio={false} />
-        <Play
+        <BiPlayCircle
           className={`inset-0 m-auto w-20 md:w-auto absolute z-10 play-icon ${tailwindCommon.transition}`}
         />
       </a>

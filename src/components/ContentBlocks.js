@@ -2,12 +2,12 @@ import React from "react"
 import tailwindCommon from "~utils/tailwindCommon"
 import { TwitterTweetEmbed } from "react-twitter-embed"
 
-import Copy from "~components/Copy"
-import Image from "~components/Image"
-import Video from "~components/Video"
-import Button from "~components/Button"
-import LinkLine from "~components/LinkLine"
-import PersonCard from "~components/PersonCard"
+import Copy from "./Copy"
+import Image from "./Image"
+import Video from "./Video"
+import Button from "./Button"
+import LinkLine from "./LinkLine"
+import PersonCard from "./PersonCard"
 
 const ContentBlocks = ({ blocks }) => {
   return (

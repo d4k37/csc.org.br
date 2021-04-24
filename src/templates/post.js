@@ -1,12 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 import moment from "moment"
-import tailwindCommon from "~utils/tailwindCommon"
-import SEOMatic from "~components/SEOMatic"
-import Layout from "~components/Layout"
-import Image from "~components/Image"
-import ContentBlocks from "~components/ContentBlocks"
-import Button from "~components/Button"
+import tailwindCommon from "./../utils/tailwindCommon"
+import SEOMatic from "./../components/SEOMatic"
+import Layout from "./../components/LayoutFront"
+import Image from "./../components/Image"
+import ContentBlocks from "./../components/ContentBlocks"
+import Button from "./../components/Button"
 
 const BlogPost = ({ data, pageContext }) => {
   const {

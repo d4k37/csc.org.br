@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import tailwindCommon from "~utils/tailwindCommon"
-import SEOMatic from "~components/SEOMatic"
-import Layout from "~components/Layout"
-import Pagination from "~components/Pagination"
-import BlogCard from "~components/BlogCard"
+import tailwindCommon from "./../utils/tailwindCommon"
+import SEOMatic from "./../components/SEOMatic"
+import Layout from "./../components/Layout"
+import Pagination from "./../components/Pagination"
+import BlogCard from "./../components/BlogCard"
 
 const StoriesIndexPage = ({ data, pageContext }) => {
   const {

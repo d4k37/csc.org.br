@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { Link, withPrefix } from "gatsby"
-import Logo from "~icons/logo.svg"
-import Button from "~components/Button"
-import LinkLine from "~components/LinkLine"
-import navigationLinks from "~utils/navigation"
-import tailwindCommon from "~utils/tailwindCommon"
-import BackChevron from "~icons/back-chevron.svg"
+import Logo from "./../icons/logo.svg"
+import Button from "./Button"
+import LinkLine from "./LinkLine"
+import navigationLinks from "./../utils/navigation"
+import tailwindCommon from "./../utils/tailwindCommon"
+import { BiChevronsLeft } from "@react-icons/all-files/bi/BiChevronsLeft"
 
 const SiteHeaderMobile = ({ headerData }) => {
   const [primaryOverlayOpen, setPrimaryOverlayOpen] = useState(false)
@@ -31,16 +31,18 @@ const SiteHeaderMobile = ({ headerData }) => {
   return (
     <>
       <header
-        className={`sticky block md:hidden top-0 z-50 w-full border-gray-400 bg-white transition duration-300 ${!primaryOverlayOpen &&
-          `border-b`}`}
+        className={`sticky block md:hidden top-0 z-50 w-full border-gray-400 bg-white transition duration-300 ${
+          !primaryOverlayOpen && `border-b`
+        }`}
       >
         <div className="flex items-center justify-between p-4">
           <Link to="/">
             <Logo />
           </Link>
           <button
-            className={`hamburger hamburger--squeeze ${primaryOverlayOpen &&
-              `is-active`}`}
+            className={`hamburger hamburger--squeeze ${
+              primaryOverlayOpen && `is-active`
+            }`}
             type="button"
             onClick={() => togglePrimaryOverlayMenu()}
           >
@@ -51,8 +53,9 @@ const SiteHeaderMobile = ({ headerData }) => {
         </div>
       </header>
       <div
-        className={`fixed top-0 z-40 pt-20 pb-16 px-8 inset-0 bg-white mobile-overlay ${primaryOverlayOpen &&
-          `mobile-overlay-open`}`}
+        className={`fixed top-0 z-40 pt-20 pb-16 px-8 inset-0 bg-white mobile-overlay ${
+          primaryOverlayOpen && `mobile-overlay-open`
+        }`}
       >
         <div className="h-full flex flex-col justify-between">
           <ul className="flex flex-col justify-center items-center">
@@ -79,8 +82,9 @@ const SiteHeaderMobile = ({ headerData }) => {
         </div>
       </div>
       <div
-        className={`fixed z-20 pt-20 pb-16 px-4 inset-0 bg-white mobile-overlay ${secondaryOverlayOpen &&
-          `mobile-overlay-open`}`}
+        className={`fixed z-20 pt-20 pb-16 px-4 inset-0 bg-white mobile-overlay ${
+          secondaryOverlayOpen && `mobile-overlay-open`
+        }`}
       >
         <div className="h-full">
           {overlayData && (
@@ -91,7 +95,7 @@ const SiteHeaderMobile = ({ headerData }) => {
                     className="p-4 pl-0"
                     onClick={() => hideSecondaryOverlayMenu()}
                   >
-                    <BackChevron />
+                    <BiChevronsLeft />
                   </button>
                 </div>
                 <div>

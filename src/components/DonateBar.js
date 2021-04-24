@@ -1,7 +1,7 @@
 import React from "react"
 // import PropTypes from "prop-types"
-import tailwindCommon from "~utils/tailwindCommon"
-import Donate from "~components/Donate"
+import tailwindCommon from "./../utils/tailwindCommon"
+import Donate from "./Donate"
 
 const DonateBar = () => (
   <>

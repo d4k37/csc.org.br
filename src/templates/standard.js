@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import tailwindCommon from "~utils/tailwindCommon"
-import SEOMatic from "~components/SEOMatic"
-import Layout from "~components/Layout"
-import Image from "~components/Image"
-import ContentBlocks from "~components/ContentBlocks"
+import tailwindCommon from "./../utils/tailwindCommon"
+import SEOMatic from "./../components/SEOMatic"
+import Layout from "./../components/Layout"
+import Image from "./../components/Image"
+import ContentBlocks from "./../components/ContentBlocks"
 
 const StandardPage = ({ data }) => {
   const {

@@ -2,8 +2,9 @@ import React, { useContext } from "react"
 import Modal from "react-modal"
 import ReactPlayer from "react-player"
 import PropTypes from "prop-types"
-import Close from "~icons/close.svg"
-import { VideoModalContext } from "~utils/context"
+import { BiXCircle } from "@react-icons/all-files/bi/BiXCircle"
+
+import { VideoModalContext } from "./../utils/context"
 
 Modal.setAppElement("#___gatsby")
 
@@ -46,7 +47,7 @@ const VideoModal = () => {
           className="fixed top-0 p-4 text-white right-0 z-40"
           onClick={() => setVideo(resetVideo())}
         >
-          <Close />
+          <BiXCircle />
         </button>
       )}
       <Modal

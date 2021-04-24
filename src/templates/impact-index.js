@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import tailwindCommon from "~utils/tailwindCommon"
-import SEOMatic from "~components/SEOMatic"
-import Layout from "~components/Layout"
-import ContentBlocks from "~components/ContentBlocks"
-import BlogCard from "~components/BlogCard"
-import Pagination from "~components/Pagination"
+import tailwindCommon from "./../utils/tailwindCommon"
+import SEOMatic from "./../components/SEOMatic"
+import Layout from "./../components/LayoutTest"
+import ContentBlocks from "./../components/ContentBlocks"
+import BlogCard from "./../components/BlogCard"
+import Pagination from "./../components/Pagination"
 
 const ImpactIndexPage = ({ data, pageContext }) => {
   const {

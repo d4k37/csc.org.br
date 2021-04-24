@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import tailwindCommon from "~utils/tailwindCommon"
-import SEOMatic from "~components/SEOMatic"
-import Layout from "~components/Layout"
-import PersonCard from "~components/PersonCard"
+import tailwindCommon from "./../utils/tailwindCommon"
+import SEOMatic from "./../components/SEOMatic"
+import Layout from "./../components/LayoutTest"
+import PersonCard from "./../components/PersonCard"
 
 const OurTeamPage = ({ data }) => {
   const {

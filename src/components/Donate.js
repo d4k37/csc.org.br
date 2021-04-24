@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Button from "~components/Button"
+import Button from "./Button"
 
 const Donate = () => {
   const data = useStaticQuery(graphql`
@@ -28,10 +28,7 @@ const Donate = () => {
       <div className="flex justify-center mt-8 mb-4">
         <div className="flex flex-wrap items-center">
           <div data-aos="fade-in">
-            <Button
-              link="https://donate.thecaresfamily.org.uk"
-              type="auxiliary"
-            >
+            <Button link="https://donate.csc.org.br" type="auxiliary">
               Donate
             </Button>
           </div>

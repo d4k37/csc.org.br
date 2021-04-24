@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import tailwindCommon from "~utils/tailwindCommon"
-import LinkLine from "~components/LinkLine"
-import Image from "~components/Image"
+import tailwindCommon from "./../utils/tailwindCommon"
+import LinkLine from "./LinkLine"
+import Image from "./Image"
 
 const NavItemWithDropdown = ({ dropDownContent, children }) => {
   return (

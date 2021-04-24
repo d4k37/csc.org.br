@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import moment from "moment"
-import tailwindCommon from "~utils/tailwindCommon"
-import Image from "~components/Image"
+import tailwindCommon from "./../utils/tailwindCommon"
+import Image from "./Image"
 
 const BlogCard = ({ uri, image, title, postDate }) => {
   const formattedDate = moment(postDate).format("Do MMMM YYYY")

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link, navigate, withPrefix } from "gatsby"
-import tailwindCommon from "~utils/tailwindCommon"
-import Chevron from "~icons/chevron.svg"
+import tailwindCommon from "./../utils/tailwindCommon"
+import { BiCaretDown } from "@react-icons/all-files/bi"
 
 const range = (start, end, length = end - start) =>
   Array.from({ length }, (_, i) => start + i)
@@ -47,7 +47,7 @@ const Pagination = ({ previousPage, nextPage, page, totalPages, entryUri }) => {
               <option key={i} value={i + 1}>{`${i + 1}`}</option>
             ))}
           </select>
-          <Chevron className="absolute right-0 pointer-events-none" />
+          <BiCaretDown className="absolute right-0 pointer-events-none" />
         </div>
         {`of ${totalPages}`}
       </div>
