@@ -45,34 +45,34 @@ const StoriesIndexPage = ({ data, pageContext }) => {
   )
 }
 
-export const StoriesIndexPageQuery = graphql`
-  query($limit: Int, $offset: Int, $entryUri: String, $relatedTo: [Int]) {
-    craft {
-      entry: entries(section: ["stories"]) {
-        title
-        uri
-      }
-      posts: entries(
-        section: ["blogPost"]
-        relatedTo: $relatedTo
-        limit: $limit
-        offset: $offset
-      ) {
-        uid
-        title
-        uri
-        postDate
-        ... on Craft_blogPost_blogPost_Entry {
-          image {
-            ...FragmentImage
-          }
-        }
-      }
-      seo: seomatic(uri: $entryUri, asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const StoriesIndexPageQuery = graphql`
+//   query($limit: Int, $offset: Int, $entryUri: String, $relatedTo: [Int]) {
+//     craft {
+//       entry: entries(section: ["stories"]) {
+//         title
+//         uri
+//       }
+//       posts: entries(
+//         section: ["blogPost"]
+//         relatedTo: $relatedTo
+//         limit: $limit
+//         offset: $offset
+//       ) {
+//         uid
+//         title
+//         uri
+//         postDate
+//         ... on Craft_blogPost_blogPost_Entry {
+//           image {
+//             ...FragmentImage
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: $entryUri, asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default StoriesIndexPage

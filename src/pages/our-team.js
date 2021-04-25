@@ -44,36 +44,36 @@ const OurTeamPage = ({ data }) => {
   )
 }
 
-export const OurTeamPageQuery = graphql`
-  {
-    craft {
-      entries(section: "ourTeam") {
-        title
-        ... on Craft_ourTeam_ourTeam_Entry {
-          teamGroups {
-            ... on Craft_teamGroups_group_BlockType {
-              heading
-              members {
-                title
-                ... on Craft_team_team_Entry {
-                  image {
-                    ... on Craft_images_Asset {
-                      ...FragmentImage
-                    }
-                  }
-                  role
-                  copy
-                }
-              }
-            }
-          }
-        }
-      }
-      seo: seomatic(uri: "our-team", asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const OurTeamPageQuery = graphql`
+//   {
+//     craft {
+//       entries(section: "ourTeam") {
+//         title
+//         ... on Craft_ourTeam_ourTeam_Entry {
+//           teamGroups {
+//             ... on Craft_teamGroups_group_BlockType {
+//               heading
+//               members {
+//                 title
+//                 ... on Craft_team_team_Entry {
+//                   image {
+//                     ... on Craft_images_Asset {
+//                       ...FragmentImage
+//                     }
+//                   }
+//                   role
+//                   copy
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: "our-team", asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default OurTeamPage

@@ -41,25 +41,25 @@ const GetInvolvedPage = ({ data }) => {
   )
 }
 
-export const GetInvolvedPageQuery = graphql`
-  {
-    craft {
-      entries(section: "getInvolved") {
-        title
-        ... on Craft_getInvolved_getInvolved_Entry {
-          copyBlocks {
-            ... on Craft_copyBlocks_block_BlockType {
-              heading
-              copy
-            }
-          }
-        }
-      }
-      seo: seomatic(uri: "get-involved", asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const GetInvolvedPageQuery = graphql`
+//   {
+//     craft {
+//       entries(section: "getInvolved") {
+//         title
+//         ... on Craft_getInvolved_getInvolved_Entry {
+//           copyBlocks {
+//             ... on Craft_copyBlocks_block_BlockType {
+//               heading
+//               copy
+//             }
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: "get-involved", asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default GetInvolvedPage

@@ -106,41 +106,41 @@ const VideoMediaPage = ({ data }) => {
   )
 }
 
-export const VideoMediaPageQuery = graphql`
-  {
-    craft {
-      entries(section: "videosMedia") {
-        title
-        ... on Craft_videosMedia_videosMedia_Entry {
-          id
-          ourVideos {
-            ... on Craft_ourVideos_video_BlockType {
-              id
-              videoVendor
-              videoId
-              image {
-                ...FragmentImage
-              }
-              caption
-            }
-          }
-          inTheMedia {
-            ... on Craft_inTheMedia_testimonial_BlockType {
-              id
-              logo {
-                ...FragmentImage
-              }
-              copy
-              articleUrl
-            }
-          }
-        }
-      }
-      seo: seomatic(uri: "videos-media", asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const VideoMediaPageQuery = graphql`
+//   {
+//     craft {
+//       entries(section: "videosMedia") {
+//         title
+//         ... on Craft_videosMedia_videosMedia_Entry {
+//           id
+//           ourVideos {
+//             ... on Craft_ourVideos_video_BlockType {
+//               id
+//               videoVendor
+//               videoId
+//               image {
+//                 ...FragmentImage
+//               }
+//               caption
+//             }
+//           }
+//           inTheMedia {
+//             ... on Craft_inTheMedia_testimonial_BlockType {
+//               id
+//               logo {
+//                 ...FragmentImage
+//               }
+//               copy
+//               articleUrl
+//             }
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: "videos-media", asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default VideoMediaPage

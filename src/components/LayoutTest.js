@@ -19,30 +19,30 @@ const Layout = ({ children, grayBg, showDonateBar }) => {
     })
   }, [])
 
-  const headerData = useStaticQuery(graphql`
-    {
-      craft {
-        entries(section: "grouping") {
-          ... on Craft_grouping_grouping_Entry {
-            title
-            uid
-            slug
-            introText
-            pagesInThisGroup {
-              title
-              uri
-              uid
-            }
-            image {
-              ... on Craft_images_Asset {
-                ...FragmentImage
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  const headerData = {} //useStaticQuery(graphql`
+  //   {
+  //     craft {
+  //       entries(section: "grouping") {
+  //         ... on Craft_grouping_grouping_Entry {
+  //           title
+  //           uid
+  //           slug
+  //           introText
+  //           pagesInThisGroup {
+  //             title
+  //             uri
+  //             uid
+  //           }
+  //           image {
+  //             ... on Craft_images_Asset {
+  //               ...FragmentImage
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>

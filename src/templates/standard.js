@@ -39,29 +39,29 @@ const StandardPage = ({ data }) => {
   )
 }
 
-export const StandardPageQuery = graphql`
-  query($entryUri: String) {
-    craft {
-      entry: entries(section: ["standardPage"], uri: [$entryUri]) {
-        title
-        uri
-        ... on Craft_standardPage_standardPage_Entry {
-          image {
-            ... on Craft_images_Asset {
-              url
-              altText
-            }
-          }
-          contentBuilder {
-            ...FragmentContentBuilder
-          }
-        }
-      }
-      seo: seomatic(uri: $entryUri, asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const StandardPageQuery = graphql`
+//   query($entryUri: String) {
+//     craft {
+//       entry: entries(section: ["standardPage"], uri: [$entryUri]) {
+//         title
+//         uri
+//         ... on Craft_standardPage_standardPage_Entry {
+//           image {
+//             ... on Craft_images_Asset {
+//               url
+//               altText
+//             }
+//           }
+//           contentBuilder {
+//             ...FragmentContentBuilder
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: $entryUri, asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default StandardPage

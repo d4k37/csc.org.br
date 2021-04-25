@@ -3,18 +3,18 @@ import { useStaticQuery, graphql } from "gatsby"
 import Button from "./Button"
 
 const Donate = () => {
-  const data = useStaticQuery(graphql`
-    {
-      craft {
-        entries(section: "donate") {
-          title
-          ... on Craft_donate_donate_Entry {
-            copy
-          }
-        }
-      }
-    }
-  `)
+  const data = {} //useStaticQuery(graphql`
+  //   {
+  //     craft {
+  //       entries(section: "donate") {
+  //         title
+  //         ... on Craft_donate_donate_Entry {
+  //           copy
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   const entry = data.craft.entries[0]
 

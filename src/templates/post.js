@@ -54,33 +54,33 @@ const BlogPost = ({ data, pageContext }) => {
   )
 }
 
-export const BlogPostQuery = graphql`
-  query($entryUri: String) {
-    craft {
-      entry: entries(section: ["blogPost"], uri: [$entryUri]) {
-        title
-        uri
-        postDate
-        author {
-          fullName
-        }
-        ... on Craft_blogPost_blogPost_Entry {
-          image {
-            ... on Craft_images_Asset {
-              url
-              altText
-            }
-          }
-          contentBuilder {
-            ...FragmentContentBuilder
-          }
-        }
-      }
-      seo: seomatic(uri: $entryUri, asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const BlogPostQuery = graphql`
+//   query($entryUri: String) {
+//     craft {
+//       entry: entries(section: ["blogPost"], uri: [$entryUri]) {
+//         title
+//         uri
+//         postDate
+//         author {
+//           fullName
+//         }
+//         ... on Craft_blogPost_blogPost_Entry {
+//           image {
+//             ... on Craft_images_Asset {
+//               url
+//               altText
+//             }
+//           }
+//           contentBuilder {
+//             ...FragmentContentBuilder
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: $entryUri, asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default BlogPost

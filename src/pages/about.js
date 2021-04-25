@@ -63,29 +63,29 @@ const AboutPage = ({ data }) => {
   )
 }
 
-export const AboutPageQuery = graphql`
-  {
-    craft {
-      entries(section: "aboutUs") {
-        title
-        ... on Craft_aboutUs_aboutUs_Entry {
-          zigZagContent {
-            ... on Craft_zigZagContent_row_BlockType {
-              copy
-              image {
-                ... on Craft_images_Asset {
-                  ...FragmentImage
-                }
-              }
-            }
-          }
-        }
-      }
-      seo: seomatic(uri: "about", asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const AboutPageQuery = graphql`
+//   {
+//     craft {
+//       entries(section: "aboutUs") {
+//         title
+//         ... on Craft_aboutUs_aboutUs_Entry {
+//           zigZagContent {
+//             ... on Craft_zigZagContent_row_BlockType {
+//               copy
+//               image {
+//                 ... on Craft_images_Asset {
+//                   ...FragmentImage
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: "about", asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default AboutPage

@@ -34,29 +34,29 @@ const BlogIndexPage = ({ data, pageContext }) => {
   )
 }
 
-export const BlogIndexPageQuery = graphql`
-  query($limit: Int, $offset: Int, $entryUri: String) {
-    craft {
-      entry: entries(section: ["blog"]) {
-        title
-        uri
-      }
-      posts: entries(section: ["blogPost"], limit: $limit, offset: $offset) {
-        uid
-        title
-        uri
-        postDate
-        ... on Craft_blogPost_blogPost_Entry {
-          image {
-            ...FragmentImage
-          }
-        }
-      }
-      seo: seomatic(uri: $entryUri, asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const BlogIndexPageQuery = graphql`
+//   query($limit: Int, $offset: Int, $entryUri: String) {
+//     craft {
+//       entry: entries(section: ["blog"]) {
+//         title
+//         uri
+//       }
+//       posts: entries(section: ["blogPost"], limit: $limit, offset: $offset) {
+//         uid
+//         title
+//         uri
+//         postDate
+//         ... on Craft_blogPost_blogPost_Entry {
+//           image {
+//             ...FragmentImage
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: $entryUri, asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default BlogIndexPage

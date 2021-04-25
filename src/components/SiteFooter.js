@@ -6,17 +6,17 @@ const SiteFooter = () => {
     craft: {
       globalSet: { legalDisclaimer },
     },
-  } = useStaticQuery(graphql`
-    {
-      craft {
-        globalSet {
-          ... on Craft_footer_GlobalSet {
-            legalDisclaimer
-          }
-        }
-      }
-    }
-  `)
+   } = {} //useStaticQuery(graphql`
+  //   {
+  //     craft {
+  //       globalSet {
+  //         ... on Craft_footer_GlobalSet {
+  //           legalDisclaimer
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <footer className="border-t border-gray-400 bg-gray-300">

@@ -1,4 +1,4 @@
-export default [
+export const navigation = [
   {
     title: "Action",
     uri: "action",
@@ -30,3 +30,5 @@ export default [
     hasDropdown: false,
   },
 ]
+
+export default navigation

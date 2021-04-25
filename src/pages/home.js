@@ -174,116 +174,116 @@ const HomePage = ({ data }) => {
   )
 }
 
-export const HomePageQuery = graphql`
-  {
-    craft {
-      entry(section: "home") {
-        ... on Craft_home_home_Entry {
-          id
-          title
-          videoId
-          videoVendor
-          image {
-            ... on Craft_images_Asset {
-              ...FragmentImage
-            }
-          }
-          heroCopy
-          heroTitle
-          primaryButtonText
-          primaryButtonUrl
-          auxiliaryButtonText
-          auxiliaryButtonUrl
-          charitiesCopy
-          charitiesHeading
-          charities {
-            ... on Craft_charities_charity_BlockType {
-              id
-              charityName
-              copy
-              logoColor
-              websiteUrl
-              image {
-                ... on Craft_images_Asset {
-                  ...FragmentImage
-                }
-              }
-            }
-          }
-          impactPost {
-            uri
-            title
-            postDate
-            id
-            ... on Craft_blogPost_blogPost_Entry {
-              uri
-              title
-              image {
-                ... on Craft_images_Asset {
-                  ...FragmentImage
-                }
-              }
-            }
-          }
-          atAGlance {
-            ... on Craft_atAGlance_stat_BlockType {
-              id
-              figure
-              caption
-            }
-          }
-          ourFavouriteStories {
-            uri
-            title
-            id
-          }
-        }
-      }
-      actionGrouping: entries(section: "grouping", slug: ["action"]) {
-        ... on Craft_grouping_grouping_Entry {
-          ...FragmentGrouping
-        }
-      }
-      voiceGrouping: entries(section: "grouping", slug: ["voice"]) {
-        ... on Craft_grouping_grouping_Entry {
-          ...FragmentGrouping
-        }
-      }
-      powerGrouping: entries(section: "grouping", slug: ["power"]) {
-        ... on Craft_grouping_grouping_Entry {
-          ...FragmentGrouping
-        }
-      }
-      tweets: entries(section: ["tweet"], limit: 2) {
-        ... on Craft_tweet_tweet_Entry {
-          id
-          postDate
-          tweet
-          tweetUrl
-        }
-      }
-      posts: entries(
-        section: ["blogPost"]
-        search: "-alsoAppearIn:campaigns"
-        limit: 4
-      ) {
-        ... on Craft_blogPost_blogPost_Entry {
-          id
-          title
-          uri
-          postDate
-          image {
-            ... on Craft_images_Asset {
-              ...FragmentImage
-            }
-          }
-        }
-      }
-      seo: seomatic(uri: "/home", asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const HomePageQuery = graphql`
+//   {
+//     craft {
+//       entry(section: "home") {
+//         ... on Craft_home_home_Entry {
+//           id
+//           title
+//           videoId
+//           videoVendor
+//           image {
+//             ... on Craft_images_Asset {
+//               ...FragmentImage
+//             }
+//           }
+//           heroCopy
+//           heroTitle
+//           primaryButtonText
+//           primaryButtonUrl
+//           auxiliaryButtonText
+//           auxiliaryButtonUrl
+//           charitiesCopy
+//           charitiesHeading
+//           charities {
+//             ... on Craft_charities_charity_BlockType {
+//               id
+//               charityName
+//               copy
+//               logoColor
+//               websiteUrl
+//               image {
+//                 ... on Craft_images_Asset {
+//                   ...FragmentImage
+//                 }
+//               }
+//             }
+//           }
+//           impactPost {
+//             uri
+//             title
+//             postDate
+//             id
+//             ... on Craft_blogPost_blogPost_Entry {
+//               uri
+//               title
+//               image {
+//                 ... on Craft_images_Asset {
+//                   ...FragmentImage
+//                 }
+//               }
+//             }
+//           }
+//           atAGlance {
+//             ... on Craft_atAGlance_stat_BlockType {
+//               id
+//               figure
+//               caption
+//             }
+//           }
+//           ourFavouriteStories {
+//             uri
+//             title
+//             id
+//           }
+//         }
+//       }
+//       actionGrouping: entries(section: "grouping", slug: ["action"]) {
+//         ... on Craft_grouping_grouping_Entry {
+//           ...FragmentGrouping
+//         }
+//       }
+//       voiceGrouping: entries(section: "grouping", slug: ["voice"]) {
+//         ... on Craft_grouping_grouping_Entry {
+//           ...FragmentGrouping
+//         }
+//       }
+//       powerGrouping: entries(section: "grouping", slug: ["power"]) {
+//         ... on Craft_grouping_grouping_Entry {
+//           ...FragmentGrouping
+//         }
+//       }
+//       tweets: entries(section: ["tweet"], limit: 2) {
+//         ... on Craft_tweet_tweet_Entry {
+//           id
+//           postDate
+//           tweet
+//           tweetUrl
+//         }
+//       }
+//       posts: entries(
+//         section: ["blogPost"]
+//         search: "-alsoAppearIn:campaigns"
+//         limit: 4
+//       ) {
+//         ... on Craft_blogPost_blogPost_Entry {
+//           id
+//           title
+//           uri
+//           postDate
+//           image {
+//             ... on Craft_images_Asset {
+//               ...FragmentImage
+//             }
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: "/home", asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default HomePage

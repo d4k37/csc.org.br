@@ -49,31 +49,31 @@ const OurValuesPage = ({ data }) => {
   )
 }
 
-export const OurValuesPageQuery = graphql`
-  {
-    craft {
-      entries(section: "ourValues") {
-        title
-        ... on Craft_ourValues_ourValues_Entry {
-          values {
-            ... on Craft_values_row_BlockType {
-              uid
-              image {
-                ... on Craft_images_Asset {
-                  ...FragmentImage
-                }
-              }
-              heading
-              copy
-            }
-          }
-        }
-      }
-      seo: seomatic(uri: "our-values", asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const OurValuesPageQuery = graphql`
+//   {
+//     craft {
+//       entries(section: "ourValues") {
+//         title
+//         ... on Craft_ourValues_ourValues_Entry {
+//           values {
+//             ... on Craft_values_row_BlockType {
+//               uid
+//               image {
+//                 ... on Craft_images_Asset {
+//                   ...FragmentImage
+//                 }
+//               }
+//               heading
+//               copy
+//             }
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: "our-values", asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default OurValuesPage

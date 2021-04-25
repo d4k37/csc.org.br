@@ -66,29 +66,29 @@ const OurSupportersPage = ({ data }) => {
   )
 }
 
-export const OurSupportersPageQuery = graphql`
-  {
-    craft {
-      entries(section: "ourSupporters") {
-        title
-        ... on Craft_ourSupporters_ourSupporters_Entry {
-          id
-          supporters {
-            ... on Craft_supporters_supporter_BlockType {
-              id
-              logo {
-                ...FragmentImage
-              }
-              supporterUrl
-            }
-          }
-        }
-      }
-      seo: seomatic(uri: "supporters", asArray: true) {
-        ...FragmentSEOMatic
-      }
-    }
-  }
-`
+// export const OurSupportersPageQuery = graphql`
+//   {
+//     craft {
+//       entries(section: "ourSupporters") {
+//         title
+//         ... on Craft_ourSupporters_ourSupporters_Entry {
+//           id
+//           supporters {
+//             ... on Craft_supporters_supporter_BlockType {
+//               id
+//               logo {
+//                 ...FragmentImage
+//               }
+//               supporterUrl
+//             }
+//           }
+//         }
+//       }
+//       seo: seomatic(uri: "supporters", asArray: true) {
+//         ...FragmentSEOMatic
+//       }
+//     }
+//   }
+// `
 
 export default OurSupportersPage
