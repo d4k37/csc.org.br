@@ -1,89 +1,48 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import Layout from "../components/layout";
+import HeaderOne from "../components/header/header-one";
+import StickyHeader from "../components/header/sticky-header";
+import MainSlider from "../components/slider/main-slider";
+import VideoCardTwo from "../components/videos/video-card-two";
+import ServiceOne from "../components/services/service-one";
+import AboutCounter from "../components/about/about-counter";
+import CausesHome from "../components/causes/causes-home";
+import DonationOptions from "../components/donation-options";
+import TeamHome from "../components/team/team-home";
+import CallToActionTwo from "../components/call-to-action/call-to-action-two";
+import GalleryTestimonials from "../components/gallery/gallery-testimonials";
+import GalleryHome from "../components/gallery/gallery-home";
+import TestimonialsTwo from "../components/testimonials/testimonials-two";
+import BlogHome from "../components/blog/blog-home";
+import CallToAction from "../components/call-to-action/call-to-action";
+import GoogleMap from "../components/google-map";
+import BrandCarousel from "../components/brand-carousel";
+import Footer from "../components/footer";
 
-import Bio from "./../components/bio"
-import Layout from "./../components/layout"
-import Seo from "./../components/seo"
-
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
+const HomeOne = () => {
   return (
-    <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+    <Layout pageTitle="Comunidade Servos da Cruz">
+      <HeaderOne />
+      <StickyHeader />
+      <MainSlider />
+      <VideoCardTwo />
+      <ServiceOne />
+      {/*<AboutCounter />
+       <CausesHome />
+      <CallToActionTwo /> */}
+      <DonationOptions />
+      {/* <TeamHome /> */}
+      <GalleryTestimonials>
+        {/* <GalleryHome /> */}
+        <TestimonialsTwo />
+      </GalleryTestimonials>
+      {/* <BlogHome /> */}
+      <CallToAction />
+      <GoogleMap extraClass="home" />
+      {/* <BrandCarousel extraClass="client-carousel__has-top-shadow" /> */}
+      <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
-      }
-    }
-  }
-`
+export default HomeOne;

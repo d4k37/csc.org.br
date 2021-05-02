@@ -1,150 +1,70 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Comunidade Servos da Cruz`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Luiz Correia`,
+      email: `luiz@luizcorreia.eti.br`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://comunidadeservosdacruz.org.br`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
+      facebook: `https://www.facebook.com/comunidadeservosdacruz`,
+      instagram: `https://www.instagram.com/comunidade_servos_da_cruz/`,
     },
   },
   plugins: [
-    `gatsby-plugin-postcss`,
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-page-creator`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 630,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
+        path: `${__dirname}/src/pages`,
+        ignore: [`**/styles.(js)`],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {
-    //   resolve: `gatsby-plugin-google-analytics`,
+    //   resolve: `gatsby-source-contentful`,
     //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
+    //     localeFilter: (locale) => locale.code === "pt-BR",
+    //     spaceId: process.env.CONTENTFUL_SPACE_ID,
+    //     // Learn about environment variables: https://gatsby.dev/env-vars
+    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    //     downloadLocal: true,
     //   },
     // },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        query: `
+        plugins: [
+          `gatsby-remark-relative-images`,
           {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
-                return Object.assign({}, node.frontmatter, {
-                  description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+              sizeByPixelDensity: true,
+              showCaptions: true,
             },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  nodes {
-                    excerpt
-                    html
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      date
-                    }
-                  }
-                }
-              }
-            `,
-            output: "/rss.xml",
           },
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        managementToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
-}
+};
