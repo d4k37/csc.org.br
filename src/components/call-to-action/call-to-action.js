@@ -1,6 +1,6 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "gatsby";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
+import { Link } from "gatsby"
 
 const CallToAction = () => {
   return (
@@ -13,7 +13,7 @@ const CallToAction = () => {
                 <i className="azino-icon-support"></i>
               </div>
               <h3>
-                Let’s make a difference in <br /> the lives of others
+                Faça a diferença <br /> na vida de nossos acolhidos
               </h3>
             </div>
           </Col>
@@ -23,13 +23,13 @@ const CallToAction = () => {
             className="d-flex justify-content-start justify-content-md-center justify-content-xl-end justify-content-lg-end"
           >
             <Link className="thm-btn " to="/become-volunteer">
-              Become a Volunteer
+              Seja um voluntário
             </Link>
           </Col>
         </Row>
       </Container>
     </section>
-  );
-};
+  )
+}
 
-export default CallToAction;
+export default CallToAction
