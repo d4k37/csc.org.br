@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import HeaderOne from "../components/header/header-one"
+import HeaderTwo from "../components/header/header-two"
 import StickyHeader from "../components/header/sticky-header"
 import MainSlider from "../components/slider/main-slider"
 import VideoCardTwo from "../components/videos/video-card-two"
@@ -22,7 +23,7 @@ import Footer from "../components/footer"
 const HomeOne = () => {
   return (
     <Layout pageTitle="Comunidade Servos da Cruz">
-      <HeaderOne />
+      <HeaderTwo />
       <StickyHeader />
       <MainSlider />
       <VideoCardTwo />

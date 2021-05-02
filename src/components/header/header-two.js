@@ -1,16 +1,16 @@
-import React from "react";
-import { Link } from "gatsby";
-import { Container } from "react-bootstrap";
-import NavLinks from "./nav-links";
+import React from "react"
+import { Link } from "gatsby"
+import { Container } from "react-bootstrap"
+import NavLinks from "./nav-links"
 
-import logoDark from "../../assets/images/logo-dark.png";
+import logoDark from "../../assets/images/logo-dark.png"
 
 const HeaderTwo = () => {
   return (
     <div className="main-header__two">
       <div className="main-header__top">
         <Container>
-          <p>Welcome to non profit charity platform</p>
+          <p>Comunidade Servos da Cruz</p>
           <div className="main-header__social">
             <a href="#none" aria-label="twitter">
               <i className="fab fa-twitter"></i>
@@ -42,24 +42,24 @@ const HeaderTwo = () => {
               <div className="header-info__box-content">
                 <h3>Email</h3>
                 <p>
-                  <a href="mailto:needhelp@azino.com">needhelp@azino.com</a>
+                  <a href="mailto:needhelp@azino.com">pazebem@csc.org.br</a>
                 </p>
               </div>
             </div>
             <div className="header-info__box">
               <i className="azino-icon-calling"></i>
               <div className="header-info__box-content">
-                <h3>Phone</h3>
+                <h3>Telefone</h3>
                 <p>
-                  <a href="tel:666-888-0000">666 888 0000</a>
+                  <a href="tel:37-3212-4398">(37) 3212-4398</a>
                 </p>
               </div>
             </div>
             <div className="header-info__box">
               <i className="azino-icon-address"></i>
               <div className="header-info__box-content">
-                <h3>Visit</h3>
-                <p>88 Broklyn Golden Street, USA</p>
+                <h3>Visite</h3>
+                <p>Al. José Domingos dos Santos, 371 - Divinópolis, MG</p>
               </div>
             </div>
           </div>
@@ -69,12 +69,12 @@ const HeaderTwo = () => {
         <Container>
           <NavLinks extraClassName="dynamic-radius" />
           <Link className="thm-btn dynamic-radius" to="/contact">
-            Donate Now
+            Doe
           </Link>
         </Container>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default HeaderTwo;
+export default HeaderTwo

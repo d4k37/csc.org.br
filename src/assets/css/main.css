@@ -2170,8 +2170,8 @@ h6 {
   position: relative;
   display: none;
 
-  -webkit-box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1);
+  /* -webkit-box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1); */
 }
 
 @media (min-width: 1200px) {
@@ -2187,8 +2187,8 @@ h6 {
 @media (min-width: 1260px) {
   .main-menu .container {
     max-width: 1250px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -2225,12 +2225,19 @@ h6 {
   margin-left: 35px;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1250px) {
   .main-menu .main-menu__list > li + li,
   .stricky-header .main-menu__list > li + li {
-    margin-left: 70px;
+    margin-left: 50px;
   }
 }
+
+/* @media (min-width: 1920px) {
+  .main-menu .main-menu__list > li + li,
+  .stricky-header .main-menu__list > li + li {
+    margin-left: 60px;
+  }
+} */
 
 .main-menu .main-menu__list > li > a,
 .main-menu .main-menu__list > li > span,
@@ -2367,8 +2374,8 @@ h6 {
   z-index: 99;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  -webkit-box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1);
+  /* -webkit-box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1); */
 }
 
 .main-menu .main-menu__list li:hover > ul,
@@ -6892,7 +6899,7 @@ h6 {
   margin-bottom: 10px;
 }
 
-#donate-amount__predefined li {
+#donate-amount__predefined li label {
   border: 2px solid #fff;
   min-height: 63px;
   border-radius: 31.5px;
@@ -6910,12 +6917,13 @@ h6 {
   transition: all 500ms ease;
 }
 
-#donate-amount__predefined li.active,
-#donate-amount__predefined li:hover {
+#donate-amount__predefined li label.active,
+#donate-amount__predefined li label:hover {
   background-color: #fff;
+  border: 2px solid #fff;
 }
 
-#donate-amount__predefined li.active a,
+/* #donate-amount__predefined li.active a,
 #donate-amount__predefined li:hover a {
   color: var(--thm-black);
 }
@@ -6926,6 +6934,44 @@ h6 {
   font-weight: 500;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+} */
+
+#donate-amount__predefined li.active label,
+#donate-amount__predefined li:hover label {
+  color: var(--thm-black);
+}
+
+#donate-amount__predefined li label {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+
+#donate-amount__predefined li input[type="radio"] {
+  visibility: hidden;
+  position: absolute;
+}
+
+#donate-amount__predefined li input[type="radio"] + label:before {
+  visibility: hidden;
+}
+
+#donate-amount__predefined li input + label {
+  position: relative;
+
+}
+
+#donate-amount__predefined li input:checked + label {
+  background-color: #fff;
+  color: var(--thm-black);
+}
+
+#donate-amount__predefined li:has(input.checked){
+  background-color: #fff;
+  color: var(--thm-black);
 }
 
 /*--------------------------------------------------------------
