@@ -19,30 +19,31 @@ const Layout = ({ children, grayBg, showDonateBar }) => {
     })
   }, [])
 
-  const headerData = {} //useStaticQuery(graphql`
-  //   {
-  //     craft {
-  //       entries(section: "grouping") {
-  //         ... on Craft_grouping_grouping_Entry {
-  //           title
-  //           uid
-  //           slug
-  //           introText
-  //           pagesInThisGroup {
-  //             title
-  //             uri
-  //             uid
-  //           }
-  //           image {
-  //             ... on Craft_images_Asset {
-  //               ...FragmentImage
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const headerData = useStaticQuery(graphql`
+    {
+      allContentfulGrouping {
+        nodes {
+          id
+          introText
+          pagesInThisGroup {
+            id
+            uri
+            title
+            image {
+              fluid {
+                base64
+                src
+                srcSet
+              }
+            }
+          }
+          slug
+          title
+          uid
+        }
+      }
+    }
+  `)
 
   return (
     <>
@@ -55,8 +56,8 @@ const Layout = ({ children, grayBg, showDonateBar }) => {
         }}
       />
       <SkipNavLink />
-      <SiteHeaderMobile headerData={headerData.craft.entries} />
-      <SiteHeader headerData={headerData.craft.entries} />
+      <SiteHeaderMobile headerData={headerData.allContentfulGrouping.nodes} />
+      <SiteHeader headerData={headerData.allContentfulGrouping.nodes} />
       <main className={grayBg ? `bg-gray-300` : `bg-white`}>
         <SkipNavContent />
         {children}

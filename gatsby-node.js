@@ -19,9 +19,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      title {
-        title
-      }
+      title
       slug
     }
   }`

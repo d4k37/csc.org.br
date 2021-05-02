@@ -16,7 +16,11 @@ const Donate = () => {
   //   }
   // `)
 
-  const entry = data.craft.entries[0]
+  const entry = {
+    copy: `<span>A Comunidade Servos da Cruz é mantida pela Divina Providência.
+    Pessoas generosas são guiadas por Deus, através das doações sua misericórdia se manisfesta e nossa missão se realiza.
+    Torne-se canal da Providência, seja um benfeitor, a sua contribuição é livre e espontânea.</span>`,
+  }
 
   return (
     <>

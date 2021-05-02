@@ -2,11 +2,10 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const SiteFooter = () => {
-  const {
-    craft: {
-      globalSet: { legalDisclaimer },
-    },
-   } = {} //useStaticQuery(graphql`
+  const legalDisclaimer =
+    "Nosso site oferece toda proteção e segurança para sua navegação e utiliza cookies para fornecer a experiência mais relevante. Ao clicar em “Aceitar”, concorda com a utilização de todos os cookies."
+
+  //useStaticQuery(graphql`
   //   {
   //     craft {
   //       globalSet {

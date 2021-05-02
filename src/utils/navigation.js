@@ -1,31 +1,31 @@
 export const navigation = [
   {
-    title: "Action",
+    title: "Institucional",
     uri: "action",
-    hasDropdown: true,
+    hasDropdown: false,
   },
   {
-    title: "Voice",
+    title: "Como colaborar",
     uri: "voice",
-    hasDropdown: true,
+    hasDropdown: false,
   },
   {
-    title: "Power",
+    title: "Casas de Acolhimento",
     uri: "power",
-    hasDropdown: true,
+    hasDropdown: false,
   },
   {
-    title: "About us",
+    title: "Pedidos de Oração",
     uri: "about-us",
-    hasDropdown: true,
+    hasDropdown: false,
   },
   {
-    title: "Blog",
+    title: "Notícias",
     uri: "blog",
     hasDropdown: false,
   },
   {
-    title: "Get involved",
+    title: "Contato",
     uri: "get-involved",
     hasDropdown: false,
   },

@@ -18,7 +18,7 @@ const NavItemWithDropdown = ({ dropDownContent, children }) => {
           <div className="flex flex-no-wrap">
             <div className="w-1/3 pr-4">
               <Image
-                {...dropDownContent.image[0]}
+                {...dropDownContent.image[0].fluid.src}
                 useRatio={false}
                 disableAos={true}
               />

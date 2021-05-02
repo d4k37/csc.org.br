@@ -1,6 +1,7 @@
 import React, { Fragment } from "react"
 import { Link } from "gatsby"
-import Logo from "./../icons/logo.svg"
+import Logo from "./../images/logo.png"
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import Button from "./Button"
 import NavItemWithDropdown from "./NavItemWithDropdown"
 import NavItem from "./NavItem"
@@ -16,7 +17,13 @@ const SiteHeader = ({ headerData }) => {
         <div className="lg:absolute py-4 lg:py-0 h-full w-full z-10 px-8 pointer-events-none">
           <div className="flex justify-between items-center h-full">
             <Link to="/" className="pointer-events-auto">
-              <Logo />
+              <StaticImage
+                src="./../images/logo.png"
+                alt="Logo"
+                placeholder="blurred"
+                layout="fixed"
+                height="40"
+              />
             </Link>
             <div className="pointer-events-auto">
               <Button

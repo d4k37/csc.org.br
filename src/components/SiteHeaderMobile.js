@@ -1,6 +1,7 @@
 import React, { useState } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import { Link, withPrefix } from "gatsby"
-import Logo from "./../icons/logo.svg"
+import Logo from "./../images/logo.png"
 import Button from "./Button"
 import LinkLine from "./LinkLine"
 import navigationLinks from "./../utils/navigation"
@@ -37,7 +38,12 @@ const SiteHeaderMobile = ({ headerData }) => {
       >
         <div className="flex items-center justify-between p-4">
           <Link to="/">
-            <Logo />
+            <StaticImage
+              src="./../images/logo.png"
+              alt="Logo"
+              placeholder="blurred"
+              layout="fixed"
+            />
           </Link>
           <button
             className={`hamburger hamburger--squeeze ${

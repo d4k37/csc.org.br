@@ -25,9 +25,7 @@ const Image = ({
   const heightModifer = useRatio ? splitRatio[1] / splitRatio[0] : null
 
   const generateTransformedImageUrl = width => {
-    return `${url}?fit=crop&crop=focalpoint&fp-x=${focalPoint[0]}&fp-y=${
-      focalPoint[1]
-    }${autoFormat ? "&auto=format" : ""}${imgixParams}&w=${width}${
+    return `${url.split("?")[0]}?w=${width}${
       heightModifer !== null ? "&h=" + Math.ceil(width * heightModifer) : ""
     }`
   }

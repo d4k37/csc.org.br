@@ -14,20 +14,21 @@ import { BiPlayCircle } from "@react-icons/all-files/bi/BiPlayCircle"
 import { VideoModalContext } from "./../utils/context"
 
 const HomePage = ({ data }) => {
-  const {
-    entry,
-    actionGrouping,
-    voiceGrouping,
-    powerGrouping,
-    posts,
-    tweets,
-    seo,
-  } = data.craft
+  // const {
+  //   entry,
+  //   actionGrouping,
+  //   voiceGrouping,
+  //   powerGrouping,
+  //   posts,
+  //   tweets,
+  //   seo,
+  // } = data.craft
+  const entry = data.contentfulLanding
   const { setVideo } = useContext(VideoModalContext)
 
   return (
     <Layout>
-      <SEOMatic {...seo} />
+      {/* <SEOMatic {...seo} /> */}
       <a
         href="#0"
         className="block relative px-4 mx-auto video-block max-w-1440 mt-16"
@@ -39,7 +40,12 @@ const HomePage = ({ data }) => {
           })
         }}
       >
-        <Image {...entry.image[0]} useRatio={false} />
+        <Image
+          height={entry.image[0].gatsbyImageData.height}
+          width={entry.image[0].gatsbyImageData.width}
+          url={entry.image[0].fluid.src}
+          useRatio={false}
+        />
         <BiPlayCircle
           className={`inset-0 m-auto w-20 md:w-auto absolute z-10 play-icon ${tailwindCommon.transition}`}
         />
@@ -69,7 +75,7 @@ const HomePage = ({ data }) => {
         </div>
       </div>
 
-      <section className="bg-gray-300 py-16">
+      {/* <section className="bg-gray-300 py-16">
         <div className="container">
           <div className="mb-16 lg:mb-32">
             <h2
@@ -169,10 +175,39 @@ const HomePage = ({ data }) => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   )
 }
+
+export const HomePageQuery = graphql`
+  {
+    contentfulLanding {
+      id
+      title
+      videoId
+      videoVendor
+      heroCopy
+      heroTitle
+      primaryButtonText
+      primaryButtonUrl
+      auxiliaryButtonText
+      auxiliaryButtonUrl
+      image {
+        gatsbyImageData
+        fluid {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+        }
+      }
+    }
+  }
+`
 
 // export const HomePageQuery = graphql`
 //   {
