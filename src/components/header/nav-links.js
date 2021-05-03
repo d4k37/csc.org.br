@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
+import { Link } from "gatsby"
 
 const NavLinks = ({ extraClassName }) => {
   // const handleDropdownStatus = (e) => {
@@ -12,16 +12,16 @@ const NavLinks = ({ extraClassName }) => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/institucional">Institucional</Link>
+        <Link to="/#">Institucional</Link>
       </li>
       <li>
-        <Link to="/causes">Como colaborar</Link>
+        <Link to="/#">Como colaborar</Link>
       </li>
       <li>
-        <Link to="/causes">Casas de Acolhimento</Link>
+        <Link to="/#">Casas de Acolhimento</Link>
       </li>
       <li>
-        <Link to="/causes">Transparência</Link>
+        <Link to="/#">Transparência</Link>
       </li>
       {/* <li className="dropdown">
         <Link to="/events">Events</Link>
@@ -72,7 +72,7 @@ const NavLinks = ({ extraClassName }) => {
         </ul>
       </li> */}
       <li>
-        <Link to="/contact">Contato</Link>
+        <Link to="/#">Contato</Link>
       </li>
       <li className="search-btn search-toggler">
         <span>
@@ -80,7 +80,7 @@ const NavLinks = ({ extraClassName }) => {
         </span>
       </li>
     </ul>
-  );
-};
+  )
+}
 
-export default NavLinks;
+export default NavLinks

@@ -1,12 +1,12 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Pagination, EffectFade } from "swiper";
+import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
+import { Swiper, SwiperSlide } from "swiper/react"
+import SwiperCore, { Autoplay, Pagination, EffectFade } from "swiper"
 
-import banner1 from "../../assets/images/main-slider/slider-1-1.png";
-import banner2 from "../../assets/images/main-slider/slider-1-2.jpg";
-import banner3 from "../../assets/images/main-slider/slider-2-1.jpg";
-SwiperCore.use([Autoplay, Pagination, EffectFade]);
+import banner1 from "../../assets/images/main-slider/slider-1-1.png"
+import banner2 from "../../assets/images/main-slider/slider-1-2.jpg"
+import banner3 from "../../assets/images/main-slider/slider-2-1.jpg"
+SwiperCore.use([Autoplay, Pagination, EffectFade])
 
 const MainSlider = () => {
   const mainSlideOptions = {
@@ -21,7 +21,7 @@ const MainSlider = () => {
     autoplay: {
       delay: 5000,
     },
-  };
+  }
   return (
     <section className="main-slider">
       <Swiper {...mainSlideOptions}>
@@ -41,7 +41,7 @@ const MainSlider = () => {
                   data-target=".donate-options"
                   className="scroll-to-target thm-btn"
                 >
-                  Start Donating
+                  Ajude
                 </a>
               </Col>
             </Row>
@@ -65,7 +65,7 @@ const MainSlider = () => {
                   data-target=".donate-options"
                   className="scroll-to-target thm-btn "
                 >
-                  Start Donating
+                  Ajude
                 </a>
               </Col>
             </Row>
@@ -98,7 +98,7 @@ const MainSlider = () => {
         <div className="swiper-pagination" id="main-slider-pagination"></div>
       </Swiper>
     </section>
-  );
-};
+  )
+}
 
-export default MainSlider;
+export default MainSlider

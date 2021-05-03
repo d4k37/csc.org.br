@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "gatsby";
-import { Link as ScrollLink } from "react-scroll";
-import { Container, Row, Col } from "react-bootstrap";
-import logoLight from "../assets/images/logo-light.png";
-import blogPost1 from "../assets/images/resources/footer-img-1-1.jpg";
-import blogPost2 from "../assets/images/resources/footer-img-1-2.jpg";
+import React from "react"
+import { Link } from "gatsby"
+import { Link as ScrollLink } from "react-scroll"
+import { Container, Row, Col } from "react-bootstrap"
+import logoLight from "../assets/images/logo-light.png"
+import blogPost1 from "../assets/images/resources/footer-img-1-1.jpg"
+import blogPost2 from "../assets/images/resources/footer-img-1-2.jpg"
 
 const Footer = () => {
   return (
@@ -49,31 +49,31 @@ const Footer = () => {
                 <h3 className="footer-widget__title">Explore</h3>
                 <ul className="list-unstyled footer-widget__link-list">
                   <li>
-                    <Link to="/causes">Our Causes</Link>
+                    <Link to="/#">Institucional</Link>
                   </li>
                   <li>
-                    <Link to="/about">About us</Link>
+                    <Link to="/#">Sobre</Link>
                   </li>
                   <li>
-                    <Link to="/news">New Campaign</Link>
+                    <Link to="/#">Notícias</Link>
                   </li>
                   <li>
-                    <Link to="/events">Upcoming Events</Link>
+                    <Link to="/#">Eventos</Link>
                   </li>
                   <li>
-                    <Link to="/about">Site Map</Link>
+                    <Link to="/#">Site Map</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Help</Link>
+                    <Link to="/#">Contato</Link>
                   </li>
                   <li>
-                    <Link to="/causes">Donate</Link>
+                    <Link to="/causes">Doe</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact us</Link>
+                    <Link to="/contact">Transparência</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Terms</Link>
+                    <Link to="/contact">Termos</Link>
                   </li>
                 </ul>
               </div>
@@ -82,7 +82,7 @@ const Footer = () => {
               <div className="footer-widget mb-40 footer-widget__blog">
                 <h3 className="footer-widget__title">Blog</h3>
                 <ul className="list-unstyled footer-widget__blog">
-                  <li>
+                  {/* <li>
                     <img src={blogPost1} alt="" />
                     <p>22 May, 2020</p>
                     <h3>
@@ -97,7 +97,7 @@ const Footer = () => {
                     <h3>
                       <Link to="/news-details">Rise fund for Healthy Food</Link>
                     </h3>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </Col>
@@ -161,7 +161,7 @@ const Footer = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

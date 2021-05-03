@@ -1,62 +1,62 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "gatsby";
-import NavLinks from "./header/nav-links";
+import React, { useEffect, useState } from "react"
+import { Link } from "gatsby"
+import NavLinks from "./header/nav-links"
 
-import logoLight from "../assets/images/logo-light.png";
-import flag1 from "../assets/images/resources/flag-1-1.jpg";
+import logoLight from "../assets/images/logo-light.png"
+import flag1 from "../assets/images/resources/flag-1-1.jpg"
 
 const MobileNav = () => {
-  const [hasMounted, setHasMounted] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false)
   const mobileMenu = () => {
-    let mobileNavToggler = document.querySelectorAll(".mobile-nav__toggler");
+    let mobileNavToggler = document.querySelectorAll(".mobile-nav__toggler")
     if (mobileNavToggler) {
-      mobileNavToggler.forEach((mobileNavTogglerBtn) => {
+      mobileNavToggler.forEach(mobileNavTogglerBtn => {
         mobileNavTogglerBtn.addEventListener("click", function (e) {
-          console.log("clicked");
+          console.log("clicked")
           document
             .querySelector(".mobile-nav__wrapper")
-            .classList.toggle("expanded");
-          e.preventDefault();
-        });
-      });
+            .classList.toggle("expanded")
+          e.preventDefault()
+        })
+      })
     }
     // search toggler
-    let searchCloser = document.querySelectorAll(".search-toggler");
+    let searchCloser = document.querySelectorAll(".search-toggler")
     if (searchCloser) {
-      searchCloser.forEach((searchCloserBtn) => {
+      searchCloser.forEach(searchCloserBtn => {
         searchCloserBtn.addEventListener("click", function (e) {
-          document.querySelector(".search-popup").classList.toggle("active");
-          e.preventDefault();
-        });
-      });
+          document.querySelector(".search-popup").classList.toggle("active")
+          e.preventDefault()
+        })
+      })
     }
 
     //Close Mobile Menu
-    let sideMenuCloser = document.querySelectorAll(".side-menu__toggler");
+    let sideMenuCloser = document.querySelectorAll(".side-menu__toggler")
     if (sideMenuCloser) {
-      sideMenuCloser.forEach((sideMenuCloserBtn) => {
+      sideMenuCloser.forEach(sideMenuCloserBtn => {
         sideMenuCloserBtn.addEventListener("click", function (e) {
           document
             .querySelector(".mobile-nav__wrapper")
-            .classList.remove("expanded");
-          e.preventDefault();
-        });
-      });
+            .classList.remove("expanded")
+          e.preventDefault()
+        })
+      })
     }
-  };
+  }
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      mobileMenu();
-      setHasMounted(true);
+      mobileMenu()
+      setHasMounted(true)
       return () => {
-        mobileMenu();
-      };
+        mobileMenu()
+      }
     }
-  }, [hasMounted]);
+  }, [hasMounted])
 
   if (!hasMounted) {
-    return null;
+    return null
   }
 
   return (
@@ -79,15 +79,15 @@ const MobileNav = () => {
         <ul className="mobile-nav__contact list-unstyled">
           <li>
             <i className="azino-icon-email"></i>
-            <a href="mailto:needhelp@azino.com">needhelp@azino.com</a>
+            <a href="mailto:needhelp@azino.com">pazebem@csc.org.br</a>
           </li>
           <li>
             <i className="azino-icon-telephone"></i>
-            <a href="tel:666-888-0000">666 888 0000</a>
+            <a href="tel:37-3212-4398">(37) 3212-4398</a>
           </li>
         </ul>
         <div className="mobile-nav__top">
-          <div className="mobile-nav__language">
+          {/* <div className="mobile-nav__language">
             <img src={flag1} alt="" />
             <label className="sr-only" htmlFor="language-select">
               select language
@@ -97,7 +97,7 @@ const MobileNav = () => {
               <option value="arabic">Arabic</option>
             </select>
             <i className="fa fa-caret-down select-icon"></i>
-          </div>
+          </div> */}
           <div className="mobile-nav__social">
             <a href="#none" aria-label="twitter">
               <i className="fab fa-twitter"></i>
@@ -115,7 +115,7 @@ const MobileNav = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MobileNav;
+export default MobileNav

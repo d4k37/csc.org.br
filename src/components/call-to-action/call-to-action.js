@@ -22,7 +22,7 @@ const CallToAction = () => {
             lg={3}
             className="d-flex justify-content-start justify-content-md-center justify-content-xl-end justify-content-lg-end"
           >
-            <Link className="thm-btn " to="/become-volunteer">
+            <Link className="thm-btn " to="/#">
               Seja um voluntário
             </Link>
           </Col>
