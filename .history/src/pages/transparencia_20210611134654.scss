@@ -1,0 +1,29 @@
+.title{ padding: 10px;
+    
+    tbody{
+        
+
+
+        tr{
+           display: flex;
+           
+            
+            th{
+                margin-bottom: 50px;
+                color: red;
+                align-items: left;
+            }
+               
+        }
+
+        tr{
+            
+
+
+            td{
+                margin-right: 50px;
+                color: blue;
+            }
+        }
+    }
+}

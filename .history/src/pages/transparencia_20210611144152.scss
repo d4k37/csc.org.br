@@ -1,0 +1,64 @@
+.main{
+    
+ 
+}
+
+.title{
+   align-items: center;
+    display: block;
+    justify-content: center;
+    padding: 50px;
+    div.pesquisa{
+        display: flex;
+        justify-content: right;
+        
+
+        input{
+            height: 50px;
+            width: 100px;
+        }
+      
+    }
+    
+    tr.linha{
+        
+       
+      
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+
+       td{
+        
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+
+        align-items: center;
+       }
+      
+    }
+    tr.linha0{
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+        
+        justify-content: stretch;
+       
+
+       td{
+        padding-right: 30px;
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+        align-items: left;
+       }
+      
+    }
+
+    div.changeView{
+        display: flex;
+        justify-content: right;
+    }
+
+}

@@ -1,0 +1,40 @@
+.title{ padding: 50px;
+
+    
+    tr.linha{
+        
+       
+      
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+
+       td{
+        
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+
+        align-items: left;
+       }
+      
+    }
+    tr.linha0{
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+        
+        justify-content: stretch;
+       
+
+       td{
+        padding: 10px;
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+        align-items: left;
+       }
+      
+    }
+
+}

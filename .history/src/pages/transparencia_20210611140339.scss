@@ -1,0 +1,15 @@
+.title{ padding: 10px;
+    li.linha{
+        display: flex;
+       justify-content: space-between;
+       align-items: center;
+      
+    }
+    li.linha0{
+        display: grid;
+        justify-content: stretch;
+       align-items: center;
+      
+    }
+
+}

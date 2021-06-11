@@ -1,0 +1,35 @@
+.title{ padding: 50px;
+
+    
+    tr.linha{
+        
+       justify-content: space-between;
+       align-items: center;
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+
+       td{
+        padding: 10px;
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+        
+       }
+      
+    }
+    tr.linha0{
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+        
+        justify-content: stretch;
+       align-items: center;
+
+       td{
+        padding: 10px;
+       }
+      
+    }
+
+}

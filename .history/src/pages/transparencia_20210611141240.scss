@@ -1,0 +1,28 @@
+.title{ padding: 50px;
+
+    
+    tr.linha{
+        
+       justify-content: space-between;
+       align-items: center;
+
+       td{
+        padding: 10px;
+        border-width: 2px;
+        border-color: black;
+       }
+      
+    }
+    tr.linha0{
+        
+        
+        justify-content: stretch;
+       align-items: center;
+
+       td{
+        padding: 10px;
+       }
+      
+    }
+
+}
