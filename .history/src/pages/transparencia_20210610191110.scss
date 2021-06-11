@@ -1,0 +1,48 @@
+.title{
+    margin-bottom: 50px;
+    margin-top: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    h{
+       
+        
+       
+        
+    
+    
+    h1{
+       
+          background-color: red;
+          align-items: center;
+    }
+    section{
+
+        p{
+            background-color: chartreuse;
+        }
+
+
+        li{
+            background-color: salmon;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+
+            ul{
+                border-radius: 1rem;
+                border-color: blue;
+            }
+         }
+
+    }
+
+    
+
+    a{
+        background-color: blue;
+        justify-content: right;
+    }
+}
+    
+}

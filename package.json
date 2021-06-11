@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "gatsby": "^3.4.0",
+    "gatsby": "^3.7.1",
     "gatsby-image": "^3.4.0",
     "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
@@ -21,6 +21,7 @@
     "gatsby-plugin-offline": "^4.4.0",
     "gatsby-plugin-page-creator": "^3.4.0",
     "gatsby-plugin-react-helmet": "^4.4.0",
+    "gatsby-plugin-sass": "^4.7.1",
     "gatsby-plugin-sharp": "^3.4.0",
     "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-remark-images": "^5.1.0",
@@ -37,6 +38,7 @@
     "react-modal-video": "^1.2.6",
     "react-scroll": "^1.8.1",
     "react-visibility-sensor": "^5.1.1",
+    "sass": "^1.34.1",
     "simple-react-lightbox": "^3.3.4-2",
     "swiper": "^6.3.5"
   }
