@@ -30,7 +30,7 @@ import testePDF from "../../content/transparencia/teste.pdf"
       return(
 
    <Layout pageTitle="ABLUBLE">
-      <HeaderTwo/>
+      <HeaderOne/>
       <StickyHeader />
 
        

@@ -10,14 +10,14 @@ const ContactFormOne = () => {
           <Col lg={5}>
             <div className="contact-page__content mb-40">
               <BlockTitle
-                title={`Escreva uma mensagem \n para nós.`}
+                title={`Feel free to write us \n a message.`}
                 tagLine="Entre em Contato Conosco"
               />
               <p className="block-text mb-30 pr-10">
-                Mande uma mensagem para a Comunidade Servos da Cruz.{" "}
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Have you done google research which works all the
+                time.{" "}
               </p>
-             
-
               <div className="footer-social black-hover">
                 <a href="#none" aria-label="twitter">
                   <i className="fab fa-twitter"></i>
@@ -32,7 +32,6 @@ const ContactFormOne = () => {
                   <i className="fab fa-instagram"></i>
                 </a>
               </div>
-             
             </div>
           </Col>
           <Col lg={7}>
@@ -40,13 +39,13 @@ const ContactFormOne = () => {
               <div className="form-group">
                 <div className="form-control">
                   <label htmlFor="name" className="sr-only">
-                    Nome
+                    Name
                   </label>
                   <input
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Seu Nome"
+                    placeholder="Your Name"
                   />
                 </div>
                 <div className="form-control">
@@ -57,44 +56,44 @@ const ContactFormOne = () => {
                     type="text"
                     name="email"
                     id="email"
-                    placeholder="Seu Email"
+                    placeholder="Email Address"
                   />
                 </div>
                 <div className="form-control">
                   <label htmlFor="phone" className="sr-only">
-                    telefone
+                    phone
                   </label>
                   <input
                     type="text"
                     name="phone"
                     id="phone"
-                    placeholder="Seu Telefone"
+                    placeholder="Phone Number"
                   />
                 </div>
                 <div className="form-control">
                   <label htmlFor="subject" className="sr-only">
-                    assunto
+                    subject
                   </label>
                   <input
                     type="text"
                     name="subject"
                     id="subject"
-                    placeholder="Assunto"
+                    placeholder="Subject"
                   />
                 </div>
                 <div className="form-control form-control-full">
                   <label htmlFor="message" className="sr-only">
-                    mensagem
+                    message
                   </label>
                   <textarea
                     name="message"
-                    placeholder="Escreva uma mensagem"
+                    placeholder="Write a Message"
                     id="message"
                   ></textarea>
                 </div>
                 <div className="form-control form-control-full">
                   <button type="submit" className="thm-btn ">
-                    Enviar Email
+                    Submit Message
                   </button>
                 </div>
               </div>

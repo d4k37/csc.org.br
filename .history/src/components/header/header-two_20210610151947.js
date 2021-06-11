@@ -42,7 +42,7 @@ const HeaderTwo = () => {
               <div className="header-info__box-content">
                 <h3>Email</h3>
                 <p>
-                  <a href="mailto:pazebem@csc.org.br">pazebem@csc.org.br</a>
+                  <a href="mailto:needhelp@azino.com">pazebem@csc.org.br</a>
                 </p>
               </div>
             </div>

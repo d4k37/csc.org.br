@@ -18,7 +18,7 @@ const NavLinks = ({ extraClassName }) => {
         <Link to="/#">Como colaborar</Link>
       </li>
       <li>
-        <Link to="/casas-de-acolhimento">Casas de Acolhimento</Link>
+        <Link to="/#">Casas de Acolhimento</Link>
       </li>
       <li>
         <Link to="/transparencia">Transparência</Link>

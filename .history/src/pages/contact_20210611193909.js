@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/layout";
-import HeaderTwo from "../components/header/header-two"
 import HeaderOne from "../components/header/header-one";
 import StickyHeader from "../components/header/sticky-header";
 import PageHeader from "../components/page-header";

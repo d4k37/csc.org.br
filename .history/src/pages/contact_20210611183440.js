@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/layout";
-import HeaderTwo from "../components/header/header-two"
 import HeaderOne from "../components/header/header-one";
 import StickyHeader from "../components/header/sticky-header";
 import PageHeader from "../components/page-header";
@@ -11,10 +10,10 @@ import Footer from "../components/footer";
 
 const Contact = () => {
   return (
-    <Layout pageTitle="Contato || Comunidade Servos da Cruz">
-      <HeaderTwo />
+    <Layout pageTitle="Contact Page || Azino || Charity React Next Template">
+      <HeaderOne />
       <StickyHeader />
-      <PageHeader title="Contato" crumbTitle="Contato" />
+      <PageHeader title="Contato" crumbTitle="Contact Us" />
       <ContactFormOne />
       <ContactCardCarousel />
       <GoogleMap extraClass="contact" />

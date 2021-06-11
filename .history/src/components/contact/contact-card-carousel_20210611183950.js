@@ -61,10 +61,10 @@ const ContactCardCarousel = () => {
               style={{ backgroundImage: `url(${cardBg})` }}
             >
               <i aria-label="contact icon" className="azino-icon-contact"></i>
-              <h3>Contato</h3>
+              <h3>Contact</h3>
               <p>
                 <a href="mailto:">pazebem@csc.org.br</a> <br />{" "}
-                <a href="tel:37 3212-4398">(37) 3212-4398</a>
+                <a href="tel:666-888-0000">666 888 0000</a>
               </p>
             </div>
           </SwiperSlide>
