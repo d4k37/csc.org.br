@@ -47,17 +47,15 @@
         border-color: grey;
         border-style: solid;
         
-        
+        justify-content: stretch;
        
 
        td{
-        padding: 30px;
         padding-right: 30px;
         border: 1px;
         border-color: grey;
         border-style: solid;
         align-items: left;
-        justify-content: left;
        }
       
     }
