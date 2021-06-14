@@ -24,18 +24,24 @@ import TransparenciaBody from "../components/transparencia/transparencia-body"
 
 import PageHeader from "../components/page-header";
 import testePDF from "../../content/transparencia/teste.pdf"
+import transparenciaTabela from "../templates/transparencia/lista/transparenciatabela"
 
 
-const comoColaborar = ()=>{
-    return(
-        <Layout pageTitle="Doe || Comunidade Servos da Cruz">
-            <HeaderTwo/>
-            <StickyHeader/>
-            <PageHeader title="Como Colaborar" crumbTitle="Como Colaborar" />
-            <DonationOptions />
-            <Footer/>
-        </Layout>
-    )
-}
+  const Transparencia = () =>{
+    
+      return(
 
-export default comoColaborar
+   <Layout pageTitle="ABLUBLE">
+      <HeaderTwo/>
+      <StickyHeader />
+      <PageHeader title="Transparência CSC" crumbTitle="Transparência" />
+      <transparenciaTabela/>
+ 
+
+   <Footer/>
+   </Layout>
+   
+      );
+    
+};
+export default Transparencia;

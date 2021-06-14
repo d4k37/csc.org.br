@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import HeaderOne from "../components/header/header-one"
 import HeaderTwo from "../components/header/header-two"
 import StickyHeader from "../components/header/sticky-header"
@@ -24,18 +24,25 @@ import TransparenciaBody from "../components/transparencia/transparencia-body"
 
 import PageHeader from "../components/page-header";
 import testePDF from "../../content/transparencia/teste.pdf"
+import {balancosPatrimoniais, ArquivoS} from "../templates/transparencia/lista/balancos-patrimoniais"
+import transparenciaTabela from "../templates/transparencia/lista/transparenciatabela"
 
 
-const comoColaborar = ()=>{
-    return(
-        <Layout pageTitle="Doe || Comunidade Servos da Cruz">
-            <HeaderTwo/>
-            <StickyHeader/>
-            <PageHeader title="Como Colaborar" crumbTitle="Como Colaborar" />
-            <DonationOptions />
-            <Footer/>
-        </Layout>
-    )
-}
+  const Transparencia = (balancosPatrimoniais, ArquivoS) =>{
+    
+      return(
 
-export default comoColaborar
+   <Layout pageTitle="ABLUBLE">
+      <HeaderTwo/>
+      <StickyHeader />
+      <PageHeader title="Transparência CSC" crumbTitle="Transparência" />
+      <transparenciaTabela/>
+ 
+
+   <Footer/>
+   </Layout>
+   
+      );
+    
+};
+export default Transparencia;
