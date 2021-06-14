@@ -1,8 +1,8 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import HeaderOne from "../components/header/header-one"
-import HeaderTwo from "../components/header/header-two"
-import StickyHeader from "../components/header/sticky-header"
+import HeaderTwo from "../../components/header/header-two"
+import StickyHeader from "../../components/header/sticky-header"
 import MainSlider from "../components/slider/main-slider"
 import VideoCardTwo from "../components/videos/video-card-two"
 import ServiceOne from "../components/services/service-one"
@@ -18,17 +18,17 @@ import BlogHome from "../components/blog/blog-home"
 import CallToAction from "../components/call-to-action/call-to-action"
 import GoogleMap from "../components/google-map"
 import BrandCarousel from "../components/brand-carousel"
-import Footer from "../components/footer"
+import Footer from "../../components/footer"
 import SomeSlider from "../components/slider/some-slider"
 import TransparenciaBody from "../components/transparencia/transparencia-body"
 
-import PageHeader from "../components/page-header";
-import testePDF from "../../content/transparencia/teste.pdf"
+import PageHeader from "../../components/page-header";
+
 import { Link } from "gatsby"
-import "./transparencia.scss"
 
 
-  const Transparencia = () =>{
+
+  const balancosPatrimoniais = () =>{
     
       return(
 
@@ -38,17 +38,17 @@ import "./transparencia.scss"
       <PageHeader title="Transparência CSC" crumbTitle="Transparência" />
      <main className="container">
         <menu >
-        <Link to="/transparencia/balancos-patrimoniais">Balanços Patrimoniais</Link><br/>
-        <Link to="/transparencia/contas-bancarias">Contas Bancárias</Link><br/>
-        <Link to="/transparencia/contratos">Contratos</Link><br/>
-        <Link to="/transparencia/despesas">Despesas</Link><br/>
-        <Link to="/transparencia/editais">Editais</Link><br/>
-        <Link to="/transparencia/estatuto-e-documentos-institucionais">Estatuto e documentos Institucionais</Link><br/>
-        <Link to="/transparencia/planilhas-e-demonstrativos">Planilhas e Demonstrativos</Link><br/>
-        <Link to="/transparencia/receitas">Receitas</Link><br/>
-        <Link to="/transparencia/recursos-humanos">Recursos Humanos</Link><br/>
-        <Link to="/transparencia/relatorios-e-certificacoes">Relatórios e Certifiações</Link><br/>
-        <Link to="/transparencia/servicos-prestados">Serviços Prestados</Link><br/>
+        <Link to="/">Balanços Patrimoniais</Link><br/>
+        <Link to="/">Contas Bancárias</Link><br/>
+        <Link to="/">Contratos</Link><br/>
+        <Link to="/">Despesas</Link><br/>
+        <Link to="/">Editais</Link><br/>
+        <Link to="/">Estatuto e documentos Institucionais</Link><br/>
+        <Link to="/">Planilhas e Demonstrativos</Link><br/>
+        <Link to="/">Receitas</Link><br/>
+        <Link to="/">Recursos Humanos</Link><br/>
+        <Link to="/">Relatórios e Certifiações</Link><br/>
+        <Link to="/">Serviços Prestados</Link><br/>
         </menu>
         
      </main>
@@ -60,4 +60,4 @@ import "./transparencia.scss"
       );
     
 };
-export default Transparencia;
+export default balancosPatrimoniais;

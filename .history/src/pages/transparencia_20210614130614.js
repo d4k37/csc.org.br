@@ -39,7 +39,7 @@ import "./transparencia.scss"
      <main className="container">
         <menu >
         <Link to="/transparencia/balancos-patrimoniais">Balanços Patrimoniais</Link><br/>
-        <Link to="/transparencia/contas-bancarias">Contas Bancárias</Link><br/>
+        <Link to="/transparencia/contas/bancarias">Contas Bancárias</Link><br/>
         <Link to="/transparencia/contratos">Contratos</Link><br/>
         <Link to="/transparencia/despesas">Despesas</Link><br/>
         <Link to="/transparencia/editais">Editais</Link><br/>

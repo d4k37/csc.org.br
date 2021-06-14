@@ -24,8 +24,8 @@ import TransparenciaBody from "../components/transparencia/transparencia-body"
 
 import PageHeader from "../components/page-header";
 import testePDF from "../../content/transparencia/teste.pdf"
-import { Link } from "gatsby"
-import "./transparencia.scss"
+import {transparenciaTabela} from "../templates/transparencia/lista/transparenciatabela"
+
 
 
   const Transparencia = () =>{
@@ -36,23 +36,12 @@ import "./transparencia.scss"
       <HeaderTwo/>
       <StickyHeader />
       <PageHeader title="Transparência CSC" crumbTitle="Transparência" />
-     <main className="container">
-        <menu >
-        <Link to="/transparencia/balancos-patrimoniais">Balanços Patrimoniais</Link><br/>
-        <Link to="/transparencia/contas-bancarias">Contas Bancárias</Link><br/>
-        <Link to="/transparencia/contratos">Contratos</Link><br/>
-        <Link to="/transparencia/despesas">Despesas</Link><br/>
-        <Link to="/transparencia/editais">Editais</Link><br/>
-        <Link to="/transparencia/estatuto-e-documentos-institucionais">Estatuto e documentos Institucionais</Link><br/>
-        <Link to="/transparencia/planilhas-e-demonstrativos">Planilhas e Demonstrativos</Link><br/>
-        <Link to="/transparencia/receitas">Receitas</Link><br/>
-        <Link to="/transparencia/recursos-humanos">Recursos Humanos</Link><br/>
-        <Link to="/transparencia/relatorios-e-certificacoes">Relatórios e Certifiações</Link><br/>
-        <Link to="/transparencia/servicos-prestados">Serviços Prestados</Link><br/>
-        </menu>
-        
-     </main>
-     
+      <label for="lista">Escolha</label>
+      <select name="lista" id="lista">
+         <option value="balancos-patrimoniais">Balanços Patrimoniais</option>
+         <option value="certificados">Certificados</option>
+      </select>
+      <transparenciaTabela/>
    <Footer/>
    
    </Layout>

@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import HeaderOne from "../components/header/header-one"
 import HeaderTwo from "../components/header/header-two"
 import StickyHeader from "../components/header/sticky-header"
-import MainSlider from "../components/slider/main-slider"
+import MainSader from "../components/sader/main-sader"
 import VideoCardTwo from "../components/videos/video-card-two"
 import ServiceOne from "../components/services/service-one"
 import AboutCounter from "../components/about/about-counter"
@@ -19,13 +19,14 @@ import CallToAction from "../components/call-to-action/call-to-action"
 import GoogleMap from "../components/google-map"
 import BrandCarousel from "../components/brand-carousel"
 import Footer from "../components/footer"
-import SomeSlider from "../components/slider/some-slider"
+import SomeSader from "../components/sader/some-sader"
 import TransparenciaBody from "../components/transparencia/transparencia-body"
 
 import PageHeader from "../components/page-header";
 import testePDF from "../../content/transparencia/teste.pdf"
-import { Link } from "gatsby"
-import "./transparencia.scss"
+import {transparenciaTabela} from "../templates/transparencia/asta/transparenciatabela"
+import { a } from "gatsby"
+
 
 
   const Transparencia = () =>{
@@ -36,23 +37,22 @@ import "./transparencia.scss"
       <HeaderTwo/>
       <StickyHeader />
       <PageHeader title="Transparência CSC" crumbTitle="Transparência" />
-     <main className="container">
-        <menu >
-        <Link to="/transparencia/balancos-patrimoniais">Balanços Patrimoniais</Link><br/>
-        <Link to="/transparencia/contas-bancarias">Contas Bancárias</Link><br/>
-        <Link to="/transparencia/contratos">Contratos</Link><br/>
-        <Link to="/transparencia/despesas">Despesas</Link><br/>
-        <Link to="/transparencia/editais">Editais</Link><br/>
-        <Link to="/transparencia/estatuto-e-documentos-institucionais">Estatuto e documentos Institucionais</Link><br/>
-        <Link to="/transparencia/planilhas-e-demonstrativos">Planilhas e Demonstrativos</Link><br/>
-        <Link to="/transparencia/receitas">Receitas</Link><br/>
-        <Link to="/transparencia/recursos-humanos">Recursos Humanos</Link><br/>
-        <Link to="/transparencia/relatorios-e-certificacoes">Relatórios e Certifiações</Link><br/>
-        <Link to="/transparencia/servicos-prestados">Serviços Prestados</Link><br/>
+     <main>
+        <menu>
+                  <a to="/">Balanços Patrimoniais</a>
+                   <a to="/">Contas Bancárias</a>
+                   <a to="/">Contratos</a>
+                   <a to="/">Despesas</a>
+                   <a to="/">Editais</a>
+                   <a to="/">Estatuto e documentos Institucionais</a>
+                   <a to="/">Planilhas e Demonstrativos</a>
+                   <a to="/">Receitas</a>
+                   <a to="/">Recursos Humanos</a>
+                   <a to="/">Relatórios e Certificações</a>
+                   <a to="/">Serviços Prestados</a>
         </menu>
-        
      </main>
-     
+      <transparenciaTabela/>
    <Footer/>
    
    </Layout>

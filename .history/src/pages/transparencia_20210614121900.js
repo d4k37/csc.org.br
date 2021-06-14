@@ -3,29 +3,30 @@ import Layout from "../components/layout"
 import HeaderOne from "../components/header/header-one"
 import HeaderTwo from "../components/header/header-two"
 import StickyHeader from "../components/header/sticky-header"
-import MainSlider from "../components/slider/main-slider"
+import MainSader from "../components/sader/main-sader"
 import VideoCardTwo from "../components/videos/video-card-two"
 import ServiceOne from "../components/services/service-one"
 import AboutCounter from "../components/about/about-counter"
 import CausesHome from "../components/causes/causes-home"
 import DonationOptions from "../components/donation-options"
 import TeamHome from "../components/team/team-home"
-import CallToActionTwo from "../components/call-to-action/call-to-action-two"
+import CallhrefActionTwo from "../components/call-href-action/call-href-action-two"
 import GalleryTestimonials from "../components/gallery/gallery-testimonials"
 import GalleryHome from "../components/gallery/gallery-home"
 import TestimonialsTwo from "../components/testimonials/testimonials-two"
 import BlogHome from "../components/blog/blog-home"
-import CallToAction from "../components/call-to-action/call-to-action"
+import CallhrefAction from "../components/call-href-action/call-href-action"
 import GoogleMap from "../components/google-map"
 import BrandCarousel from "../components/brand-carousel"
 import Footer from "../components/footer"
-import SomeSlider from "../components/slider/some-slider"
+import SomeSader from "../components/sader/some-sader"
 import TransparenciaBody from "../components/transparencia/transparencia-body"
 
 import PageHeader from "../components/page-header";
 import testePDF from "../../content/transparencia/teste.pdf"
-import { Link } from "gatsby"
-import "./transparencia.scss"
+import {transparenciaTabela} from "../templates/transparencia/asta/transparenciatabela"
+import { a } from "gatsby"
+
 
 
   const Transparencia = () =>{
@@ -36,23 +37,22 @@ import "./transparencia.scss"
       <HeaderTwo/>
       <StickyHeader />
       <PageHeader title="Transparência CSC" crumbTitle="Transparência" />
-     <main className="container">
-        <menu >
-        <Link to="/transparencia/balancos-patrimoniais">Balanços Patrimoniais</Link><br/>
-        <Link to="/transparencia/contas-bancarias">Contas Bancárias</Link><br/>
-        <Link to="/transparencia/contratos">Contratos</Link><br/>
-        <Link to="/transparencia/despesas">Despesas</Link><br/>
-        <Link to="/transparencia/editais">Editais</Link><br/>
-        <Link to="/transparencia/estatuto-e-documentos-institucionais">Estatuto e documentos Institucionais</Link><br/>
-        <Link to="/transparencia/planilhas-e-demonstrativos">Planilhas e Demonstrativos</Link><br/>
-        <Link to="/transparencia/receitas">Receitas</Link><br/>
-        <Link to="/transparencia/recursos-humanos">Recursos Humanos</Link><br/>
-        <Link to="/transparencia/relatorios-e-certificacoes">Relatórios e Certifiações</Link><br/>
-        <Link to="/transparencia/servicos-prestados">Serviços Prestados</Link><br/>
+     <main>
+        <menu>
+                  <a href="/">Balanços Patrimoniais</a>
+                   <a href="/">Contas Bancárias</a>
+                   <a href="/">Contrahrefs</a>
+                   <a href="/">Despesas</a>
+                   <a href="/">Editais</a>
+                   <a href="/">Estatuhref e documenhrefs Institucionais</a>
+                   <a href="/">Planilhas e Demonstrativos</a>
+                   <a href="/">Receitas</a>
+                   <a href="/">Recursos Humanos</a>
+                   <a href="/">Relatórios e Certificações</a>
+                   <a href="/">Serviços Prestados</a>
         </menu>
-        
      </main>
-     
+      <transparenciaTabela/>
    <Footer/>
    
    </Layout>

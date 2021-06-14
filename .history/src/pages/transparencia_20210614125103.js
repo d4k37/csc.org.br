@@ -24,7 +24,7 @@ import TransparenciaBody from "../components/transparencia/transparencia-body"
 
 import PageHeader from "../components/page-header";
 import testePDF from "../../content/transparencia/teste.pdf"
-import { Link } from "gatsby"
+import { href } from "gatsby"
 import "./transparencia.scss"
 
 
@@ -38,17 +38,17 @@ import "./transparencia.scss"
       <PageHeader title="Transparência CSC" crumbTitle="Transparência" />
      <main className="container">
         <menu >
-        <Link to="/transparencia/balancos-patrimoniais">Balanços Patrimoniais</Link><br/>
-        <Link to="/transparencia/contas-bancarias">Contas Bancárias</Link><br/>
-        <Link to="/transparencia/contratos">Contratos</Link><br/>
-        <Link to="/transparencia/despesas">Despesas</Link><br/>
-        <Link to="/transparencia/editais">Editais</Link><br/>
-        <Link to="/transparencia/estatuto-e-documentos-institucionais">Estatuto e documentos Institucionais</Link><br/>
-        <Link to="/transparencia/planilhas-e-demonstrativos">Planilhas e Demonstrativos</Link><br/>
-        <Link to="/transparencia/receitas">Receitas</Link><br/>
-        <Link to="/transparencia/recursos-humanos">Recursos Humanos</Link><br/>
-        <Link to="/transparencia/relatorios-e-certificacoes">Relatórios e Certifiações</Link><br/>
-        <Link to="/transparencia/servicos-prestados">Serviços Prestados</Link><br/>
+        <href to="/">Balanços Patrimoniais</href><br/>
+        <href to="/">Contas Bancárias</href><br/>
+        <href to="/">Contratos</href><br/>
+        <href to="/">Despesas</href><br/>
+        <href to="/">Editais</href><br/>
+        <href to="/">Estatuto e documentos Institucionais</href><br/>
+        <href to="/">Planilhas e Demonstrativos</href><br/>
+        <href to="/">Receitas</href><br/>
+        <href to="/">Recursos Humanos</href><br/>
+        <href to="/">Relatórios e Certifiações</href><br/>
+        <href to="/">Serviços Prestados</href><br/>
         </menu>
         
      </main>
